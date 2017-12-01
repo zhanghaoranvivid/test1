@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+   
+<!--head-->
+  <head>
+  <link type="text/css" rel="stylesheet" href="stylesheet.css"/> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   
+  <title>Harbin</title>
+  </head>
+
+  <body  bgcolor="＃000000" >
+
+ <div id="header">
+
+ <table class="tab0" >       
+       <tbody>          
+            <tr>
+              <td>
+                  <img class="weibopicture" src="http://lyle.smu.edu/~haoran/web1/user_picture.JPG" />
+              </td>
+              <td>
+                 <p id="name">Haoran Zhang</p>
+              </td>
+
+              <div>
+              <td>
+                 <div class="tab1">
+               <a class="lianjie" href="https://www.google.com/intl/zh-CN/mail/help/about.html">Emial <span class="hard">zhanghaoranvivid@gmail.com</span></a>
+                    </a>
+             </div>
+              </td>
+              <td>
+                   <img class="weibopicture" src="http://www.flqin.com/image/age.png" />
+              </td>
+              </div>
+              </tr>
+
+       </tbody>
+      </table>
+ 
+        </div>
+        <!--
+              <div class="left">
+                
+              </div> -->
+              
+              <div class="right" align="center">
+
+
+<!--zhongyingweiduizhao-->
+                    <div style="background: url(http://www.hrbicesnow.com/public/images/20170121/jgg_01.jpg) no-repeat center top; height:1049px;"></div>
+                    
+                    <div style="background: url(http://www.hrbicesnow.com/public/images/ad-1.jpg) no-repeat center top; height:350px;width:100%;">
+                    <p style="font-family:Arial;text-align: center;font-size:25px;color:#ff4777">
+                    哈尔滨是一个浪漫的城市  
+                    <br/>
+                    也是我魂牵梦绕的地方
+                    </p>
+                    
+                    </div>
+     
+
+ <!--Harbin-->
+ 
+<table>
+<tbody>
+<tr>
+  
+   <td><a href="http://www.hrbicesnow.com/" >
+        <span class="hover1"></span></a>
+    <p style="font-family:Arial;font-size: 25px;color:#ff4777;
+    text-align:center">Ice-snow world</p>
+   </td>
+
+   <td><a href="https://en.wikipedia.org/wiki/Harbin" >
+          <span class="hover2"></span></a>
+    <p style="font-family:Arial;font-size:25px;color:#ff4777;
+    text-align:center">Snow town</p> 
+   </td>
+</tr>
+</tbody>
+</table>
+
+
+<!--voice xml 1-->
+
+  <div id="vv" style="font-family:Arial;text-align: center;font-size:20px;color:#ff4777">
+  <p style="font-family:Arial;text-align: center;font-size:50px；color:#ff4777">Here are several famous sits of Harbin.You can call following number and say one of the sits,and click the button: <br/>
+  <!--<ul style="list-sytle:non">
+  <li>Unit 731 Musem</li>
+  <li>weather</li>
+  <li>Central Avenue</li>
+  <li>St.Sophia Cathedral</li>
+  <li>Harbin International Ice and Snow Sculpture Festival</li>
+  <li>Street Snacks</li>
+  </ul>-->
+  <br/>
+   <p style="font-family:Arial;text-align: center;font-size:20px;color:#ff4777">
+                   Unit 731 Musem  .  七三一部队遗址<br/><br/>
+                   weather  .  气候<br/><br/>
+                  Central Avenue  .  中央大街<br/><br/>
+  St.Sophia Cathedral  .  圣索非亚教堂<br/><br/>
+  Harbin International Ice and Snow Sculpture Festival  .  哈尔滨国际冰雪节<br/><br/>
+  Street Snacks  .  特色小吃<br/><br/>
+                    
+  </p>
+
+   <input class="logo"  type="button" value="Call (832)384-4052 " onclick="doAjaxCall1('gismoCommand.txt');"/>
+  </div><br/><br/><br/><br/><br/><br/>
+
+                    
+<!--moving logo-->
+
+ 
+ <div id="aa" style="font-family:Arial;text-align: center;font-size:25px;color:#ff4777">
+  <p style="font-family:Arial;text-align: center;font-size:25px;color:#ff4777">I have <span style="color:#56004f">moving logo</span>about Harbin.Click the button to see it.<br/>
+ 
+  </p>
+ 
+   <input class="logo" type="button" value="Moving logo" onclick="doAjaxCall2('logo.svg');"/>
+  </div><br/><br/><br/><br/><br/><br/>
+
+  <!--movie-->
+ 
+ <div id="ss" style="font-family:Arial;text-align: center;font-size:25px;color:#ff4777">
+  <p style="font-family:Arial;text-align: center;font-size:25px;color:#ff4777">I have <span style="color:#56004f">movies</span> about Harbin.Click the button to see it.<br/>
+
+  </p>
+
+   <input class="logo" type="button" value="Movies" onclick="doAjaxCall3('movie.php');"/>
+  </div><br/><br/><br/><br/><br/><br/>
+    
+
+
+  
+
+<!--voicexml1-->
+    <script type="text/javascript">
+ function doAjaxCall1(the_request)
+    {
+        var request=null;
+        if(window.XMLHttpRequest)
+        {
+            request=new XMLHttpRequest();
+        }else if(window.ActiveXObject)
+        {
+            request=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        if(request)
+        {
+            request.open("GET",the_request,true);
+            request.onreadystatechange=function()
+            {
+                if(request.readyState===4)
+                {
+                    if (request.status == 200 || request.status == 0)
+                    {
+                       document.getElementById("vv").innerHTML=request.responseText;
+                       
+                    }
+                }
+            }
+            request.send(null);
+        }else{
+            alert("error");
+            }
+    }                  
+  </script>
+<!--moving logo-->
+ <script type="text/javascript">
+ function doAjaxCall2(the_request)
+    {
+        var request=null;
+        if(window.XMLHttpRequest)
+        {
+            request=new XMLHttpRequest();
+        }else if(window.ActiveXObject)
+        {
+            request=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        if(request)
+        {
+            request.open("GET",the_request,true);
+            request.onreadystatechange=function()
+            {
+                if(request.readyState===4)
+                {
+                    if (request.status == 200 || request.status == 0)
+                    {
+                       document.getElementById("aa").innerHTML=request.responseText;
+                   
+                    }
+                }
+            }
+            request.send(null);
+        }else{
+            alert("error");
+            }
+    }   
+
+
+              
+  </script>
+
+  <!--movies-->
+  
+ <script type="text/javascript">
+ function doAjaxCall3(the_request)
+    {
+        var request=null;
+        if(window.XMLHttpRequest)
+        {
+            request=new XMLHttpRequest();
+        }else if(window.ActiveXObject)
+        {
+            request=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        if(request)
+        {
+            request.open("GET",the_request,true);
+            request.onreadystatechange=function()
+            {
+                if(request.readyState===4)
+                {
+                    if (request.status == 200 || request.status == 0)
+                    {
+                       document.getElementById("ss").innerHTML=request.responseText;
+                   
+                    }
+                }
+            }
+            request.send(null);
+        }else{
+            alert("error");
+            }
+    }   
+
+
+              
+  </script>
+  </div> -->
+            
+    </body>                  
+</html>
